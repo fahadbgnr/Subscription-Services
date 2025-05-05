@@ -1,14 +1,14 @@
-import { FaStar } from "react-icons/fa";
+import { Link } from "react-router";
+
 
 const SubscriptionBox = ({ box }) => {
   const {
+    id,
     name,
     thumbnail,
     frequency,
     price,
     tech_category,
-    ratings,
-    number_of_reviews,
   } = box;
 
   return (
@@ -27,16 +27,12 @@ const SubscriptionBox = ({ box }) => {
           <p>
             <span className="font-semibold">${price}</span> / {frequency}
           </p>
-          {/* <div className="flex items-center gap-1 text-orange-500">
-            <FaStar />
-            <span className="text-gray-700">{ratings} ({number_of_reviews})</span>
-          </div> */}
         </div>
 
         <div className="card-actions justify-end mt-2">
-          <button className="btn btn-outline btn-sm text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white">
+          <Link to={`/cars-details/${id}`} className="btn btn-outline btn-sm text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white">
             View More
-          </button>
+          </Link>
         </div>
       </div>
     </div>

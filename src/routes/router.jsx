@@ -6,6 +6,7 @@ import SubscriptionBox from "../pages/SubscriptionBox";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import AuthLayout from "../layout/AuthLayout";
+import CardsDetails from "../pages/CardsDetails";
 
 const router = createBrowserRouter(
     [
@@ -45,8 +46,10 @@ const router = createBrowserRouter(
             ]
         },
         {
-            path: '/news',
-            element: <h2>news layout</h2>,
+            path: '/cars-details/:id',
+            element: <CardsDetails></CardsDetails>,
+            loader: ()=> fetch('/subscription.json'),
+
         },
         {
             path: '/*',
