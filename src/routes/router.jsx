@@ -8,6 +8,7 @@ import Register from "../pages/Register";
 import AuthLayout from "../layout/AuthLayout";
 import CardsDetails from "../pages/CardsDetails";
 import PrivateRoute from "../provider/PrivateRoute";
+import Loading from "../pages/Loading";
 
 const router = createBrowserRouter(
     [
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
                     path:'',
                     element: <Home></Home>,
                     loader: ()=> fetch('/subscription.json'),
+                    hydrateFallbackElement: <Loading></Loading>
                 },
                 {
                     path:'/profile',
@@ -29,6 +31,7 @@ const router = createBrowserRouter(
                     path:'/subscription/:id',
                     element: <SubscriptionBox></SubscriptionBox>,
                     loader: ()=> fetch('/subscription.json'),
+                    hydrateFallbackElement: <Loading></Loading>
                 },
             ]
         },
@@ -52,6 +55,7 @@ const router = createBrowserRouter(
                 <CardsDetails></CardsDetails>,
             </PrivateRoute>,
             loader: ()=> fetch('/subscription.json'),
+            hydrateFallbackElement: <Loading></Loading>
 
         },
         {

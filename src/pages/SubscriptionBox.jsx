@@ -6,7 +6,7 @@ const SubscriptionBox = () => {
     const [subscriptionBox, setSubscriptionBox] = useState([]);
     const {id} =useParams();
     const data = useLoaderData();
-    console.log(data);
+    // console.log(data);
     useEffect(()=>{
         if(id == "0"){
             setSubscriptionBox(data);
