@@ -1,9 +1,10 @@
 import React from 'react';
+import SubscriptionBox from './SubscriptionBox';
 
 const Home = () => {
     return (
         <div>
-            home
+           <SubscriptionBox></SubscriptionBox>
         </div>
     );
 };

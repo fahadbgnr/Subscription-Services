@@ -1,6 +1,6 @@
 [
     {
-      "id": 0,
+      "id": 1,
       "name": "Smart Home Box",
       "thumbnail": "https://i.ibb.co.com/GQpG892Q/smart-speaker-house-control-innovative-technology.jpg",
       "banner": "https://i.ibb.co.com/39GD7gB1/digital-tablet-screen-with-smart-home-controller-wooden-table.jpg",
@@ -22,7 +22,7 @@
       "number_of_reviews": 315
     },
     {
-      "id": 1,
+      "id": 2,
       "name": "Netflix",
       "thumbnail": "https://i.ibb.co.com/N6QRVbVr/movies-entertainment-events-digital-media.jpg",
       "banner": "https://i.ibb.co.com/kgnNzPPM/pexels-jmark-2726370.jpg",
@@ -44,7 +44,7 @@
       "number_of_reviews": 10240
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "Spotify Premium",
       "thumbnail": "https://i.ibb.co.com/vxW5PD3h/pexels-cottonbro-5077069.jpg",
       "banner": "https://i.ibb.co.com/j9DzccKX/pexels-danishsaifi0112-8294215.jpg",
@@ -66,7 +66,7 @@
       "number_of_reviews": 8543
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Amazon Prime",
       "thumbnail": "https://i.ibb.co.com/Zp8vCZrY/pexels-introspectivedsgn-16158536.jpg",
       "banner": "https://i.ibb.co.com/Zp8vCZrY/pexels-introspectivedsgn-16158536.jpg",
@@ -88,7 +88,7 @@
       "number_of_reviews": 15700
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "Udemy Pro",
       "thumbnail": "https://i.ibb.co.com/RTvcb60T/pexels-tima-miroshnichenko-6860390.jpg",
       "banner": "https://i.ibb.co.com/RTvcb60T/pexels-tima-miroshnichenko-6860390.jpg",
@@ -110,7 +110,7 @@
       "number_of_reviews": 6312
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "Adobe Creative Cloud",
       "thumbnail": "https://i.ibb.co.com/d4J844Nq/pexels-romawinamaasli-5693833.jpg",
       "banner": "https://i.ibb.co.com/d4J844Nq/pexels-romawinamaasli-5693833.jpg",
@@ -132,7 +132,7 @@
       "number_of_reviews": 9421
     },
     {
-      "id": 6,
+      "id": 7,
       "name": "GitHub Copilot",
       "thumbnail": "https://i.ibb.co.com/M5BDQzBH/code-5290465-1280.jpg",
       "banner": "https://i.ibb.co.com/3mvLs9FC/code-5289831-1280.jpg",
@@ -154,7 +154,7 @@
       "number_of_reviews": 2733
     },
     {
-      "id": 7,
+      "id": 8,
       "name": "Figma Professional",
       "thumbnail": "https://i.ibb.co.com/fGx1LBrT/acd8ce18-79b8-40a0-b99c-9f47549bfc1a-cover.png",
       "banner": "https://i.ibb.co.com/fGx1LBrT/acd8ce18-79b8-40a0-b99c-9f47549bfc1a-cover.png",
