@@ -1,0 +1,179 @@
+[
+    {
+      "id": 0,
+      "name": "Smart Home Box",
+      "thumbnail": "https://example.com/images/smart-home-box-thumbnail.jpg",
+      "banner": "https://example.com/images/smart-home-box-banner.jpg",
+      "frequency": "Yearly",
+      "price": 199.99,
+      "description": "Transform your home into a smart home with curated smart devices, home automation products, and IoT gadgets.",
+      "tech_category": "Smart Home",
+      "features": [
+        "Smart Home Devices",
+        "Home Automation Tools",
+        "Cutting-edge IoT Gadgets"
+      ],
+      "subscription_benefits": [
+        "Discount on Future Smart Home Purchases",
+        "Exclusive Smart Home Tutorials",
+        "Early Access to Product Releases"
+      ],
+      "ratings": 4.8,
+      "number_of_reviews": 315
+    },
+    {
+      "id": 1,
+      "name": "Netflix",
+      "thumbnail": "https://example.com/images/netflix-thumbnail.jpg",
+      "banner": "https://example.com/images/netflix-banner.jpg",
+      "frequency": "Monthly",
+      "price": 15.99,
+      "description": "Stream unlimited movies, TV shows, and exclusive Netflix originals anywhere, anytime.",
+      "tech_category": "Streaming",
+      "features": [
+        "HD Streaming",
+        "Multiple Profiles",
+        "Offline Viewing"
+      ],
+      "subscription_benefits": [
+        "Ad-Free Experience",
+        "Access to New Releases",
+        "Family Plan Options"
+      ],
+      "ratings": 4.7,
+      "number_of_reviews": 10240
+    },
+    {
+      "id": 2,
+      "name": "Spotify Premium",
+      "thumbnail": "https://example.com/images/spotify-thumbnail.jpg",
+      "banner": "https://example.com/images/spotify-banner.jpg",
+      "frequency": "Monthly",
+      "price": 9.99,
+      "description": "Enjoy unlimited music streaming without ads on all your devices with Spotify Premium.",
+      "tech_category": "Music",
+      "features": [
+        "High Quality Audio",
+        "Offline Mode",
+        "Unlimited Skips"
+      ],
+      "subscription_benefits": [
+        "No Advertisements",
+        "Download Songs for Offline",
+        "Cross-Device Sync"
+      ],
+      "ratings": 4.6,
+      "number_of_reviews": 8543
+    },
+    {
+      "id": 3,
+      "name": "Amazon Prime",
+      "thumbnail": "https://example.com/images/amazon-prime-thumbnail.jpg",
+      "banner": "https://example.com/images/amazon-prime-banner.jpg",
+      "frequency": "Monthly",
+      "price": 14.99,
+      "description": "Access fast delivery, Prime Video, exclusive deals, and more with Amazon Prime.",
+      "tech_category": "Shopping & Streaming",
+      "features": [
+        "Prime Video Streaming",
+        "Free Two-Day Shipping",
+        "Prime Reading"
+      ],
+      "subscription_benefits": [
+        "Exclusive Member Discounts",
+        "Twitch Prime Access",
+        "Same-Day Delivery in Select Areas"
+      ],
+      "ratings": 4.8,
+      "number_of_reviews": 15700
+    },
+    {
+      "id": 4,
+      "name": "Udemy Pro",
+      "thumbnail": "https://example.com/images/udemy-pro-thumbnail.jpg",
+      "banner": "https://example.com/images/udemy-pro-banner.jpg",
+      "frequency": "Monthly",
+      "price": 19.99,
+      "description": "Get access to a curated library of professional courses to boost your skills.",
+      "tech_category": "Education",
+      "features": [
+        "Access to Premium Courses",
+        "Skill Assessments",
+        "Certificates of Completion"
+      ],
+      "subscription_benefits": [
+        "Unlimited Course Access",
+        "Learning Paths",
+        "Expert Instructors"
+      ],
+      "ratings": 4.5,
+      "number_of_reviews": 6312
+    },
+    {
+      "id": 5,
+      "name": "Adobe Creative Cloud",
+      "thumbnail": "https://example.com/images/adobe-cc-thumbnail.jpg",
+      "banner": "https://example.com/images/adobe-cc-banner.jpg",
+      "frequency": "Monthly",
+      "price": 52.99,
+      "description": "Access the full suite of Adobe apps for design, video editing, photography, and more.",
+      "tech_category": "Design Tools",
+      "features": [
+        "Photoshop, Illustrator, Premiere Pro",
+        "Cloud Storage",
+        "Cross-Platform Sync"
+      ],
+      "subscription_benefits": [
+        "Free Tutorials & Resources",
+        "Regular Software Updates",
+        "Portfolio Hosting"
+      ],
+      "ratings": 4.7,
+      "number_of_reviews": 9421
+    },
+    {
+      "id": 6,
+      "name": "GitHub Copilot",
+      "thumbnail": "https://example.com/images/github-copilot-thumbnail.jpg",
+      "banner": "https://example.com/images/github-copilot-banner.jpg",
+      "frequency": "Monthly",
+      "price": 10.00,
+      "description": "Get AI-powered code suggestions directly in your editor with GitHub Copilot.",
+      "tech_category": "Developer Tools",
+      "features": [
+        "Real-time Code Suggestions",
+        "Supports Multiple Languages",
+        "IDE Integration"
+      ],
+      "subscription_benefits": [
+        "Faster Development Workflow",
+        "Contextual Code Snippets",
+        "Learning Through Code Completion"
+      ],
+      "ratings": 4.6,
+      "number_of_reviews": 2733
+    },
+    {
+      "id": 7,
+      "name": "Figma Professional",
+      "thumbnail": "https://example.com/images/figma-thumbnail.jpg",
+      "banner": "https://example.com/images/figma-banner.jpg",
+      "frequency": "Monthly",
+      "price": 12.00,
+      "description": "Collaborative interface design tool used by teams to design, prototype, and iterate faster.",
+      "tech_category": "UI/UX Design",
+      "features": [
+        "Unlimited Version History",
+        "Team Libraries",
+        "Advanced Prototyping"
+      ],
+      "subscription_benefits": [
+        "Real-Time Collaboration",
+        "Design Systems Support",
+        "Priority Support"
+      ],
+      "ratings": 4.9,
+      "number_of_reviews": 4021
+    }
+  ]
+  
