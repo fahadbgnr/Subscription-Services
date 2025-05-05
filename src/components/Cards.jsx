@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
+import { Link } from 'react-router';
 
 const Cards = ({card}) => {
     const [reviewText, setReviewText] = useState("");
@@ -24,6 +25,7 @@ const Cards = ({card}) => {
       setRating("");
     };
     const {
+        id,
         name,
         banner,
         frequency,
@@ -38,7 +40,7 @@ const Cards = ({card}) => {
     return (
         <div className="max-w-3xl mx-auto p-6 bg-white shadow-xl rounded-xl space-y-6">
         {/* Banner */}
-        <img src={banner} alt={name} className="w-full rounded-lg h-64 object-cover" />
+        <img  src={banner} alt={name} className="w-full rounded-lg object-cover" />
   
         {/* Title & Info */}
         <div>
@@ -120,6 +122,9 @@ const Cards = ({card}) => {
               ))}
             </ul>
           )}
+        </div>
+        <div className='flex justify-end'>
+        <Link to={`/subscription/${id}`} className='btn btn-secondary '>Back to Home</Link>
         </div>
       </div>
     );

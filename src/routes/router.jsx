@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import AuthLayout from "../layout/AuthLayout";
 import CardsDetails from "../pages/CardsDetails";
+import PrivateRoute from "../provider/PrivateRoute";
 
 const router = createBrowserRouter(
     [
@@ -47,7 +48,9 @@ const router = createBrowserRouter(
         },
         {
             path: '/cars-details/:id',
-            element: <CardsDetails></CardsDetails>,
+            element: <PrivateRoute>
+                <CardsDetails></CardsDetails>,
+            </PrivateRoute>,
             loader: ()=> fetch('/subscription.json'),
 
         },
