@@ -17,7 +17,7 @@ const SubscriptionBox = () => {
     return <div> 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
             {
-                data.map(box=> <SubscriptionCard key={id} box={box}></SubscriptionCard>)
+                data.map(box=> <SubscriptionCard key={box.id} box={box}></SubscriptionCard>)
             }
             
         </div>

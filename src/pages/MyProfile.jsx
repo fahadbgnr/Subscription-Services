@@ -2,27 +2,32 @@ import React, { use, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { toast } from 'react-toastify';
 import { updateProfile } from 'firebase/auth';
 import { AuthContext } from '../provider/AuthProvider';
 
 const MyProfile = () => {
-    const user = use(AuthContext);
-    const [name, setName] = useState(user.displayName || '');
-    const [photoURL, setPhotoURL] = useState(user.photoURL || '');
+    const { currentUser, reloadUser } = use(AuthContext);
+    const [name, setName] = useState(currentUser?.displayName || "");
+    const [photoURL, setPhotoURL] = useState(currentUser?.photoURL || "");
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState("");
   
-    // Handle form submission (update profile)
-    const handleSubmit = async (e) => {
+    const handleUpdate = async (e) => {
       e.preventDefault();
+      setLoading(true);
+      setMessage("");
   
       try {
-        await updateProfile(user, {
+        await updateProfile(currentUser, {
           displayName: name,
           photoURL: photoURL,
         });
-        toast.success('Profile updated successfully!');
+        if (reloadUser) await reloadUser(); 
+        setMessage("Profile updated successfully!");
       } catch (error) {
-        toast.error('Error updating profile!');
+        setMessage("Error updating profile: " + error.message);
+      } finally {
+        setLoading(false);
       }
     };
     return (
@@ -36,30 +41,42 @@ const MyProfile = () => {
             </nav>
             <main className='w-11/12 mx-auto my-20 text-center min-h-screen'>
                 <div className="max-w-md mx-auto p-4">
-                    <h1 className="text-3xl font-bold mb-4">Profile</h1>
-                    <form onSubmit={handleSubmit} className="space-y-4">
-                        <div className="form-control">
-                            <label className="label" htmlFor="name">Name</label>
-                            <input
-                                type="text"
-                                id="name"
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
-                                className="input input-bordered w-full"
-                            />
-                        </div>
-                        <div className="form-control">
-                            <label className="label" htmlFor="photoURL">Photo URL</label>
-                            <input
-                                type="text"
-                                id="photoURL"
-                                value={photoURL}
-                                onChange={(e) => setPhotoURL(e.target.value)}
-                                className="input input-bordered w-full"
-                            />
-                        </div>
-                        <button type="submit" className="btn btn-primary w-full">Save Changes</button>
+                    <h2 className="text-2xl font-bold mb-4">My Profile</h2>
+                    <div className="mb-4">
+                        <img
+                            src={currentUser?.photoURL || "/default-avatar.png"}
+                            alt="Profile"
+                            className="w-24 h-24 rounded-full object-cover"
+                        />
+                        <p><strong>Email:</strong> {currentUser?.email}</p>
+                        <p><strong>Name:</strong> {currentUser?.displayName}</p>
+                    </div>
+
+                    <form onSubmit={handleUpdate} className="space-y-4">
+                        <input
+                            type="text"
+                            className="w-full p-2 border rounded"
+                            placeholder="Update Name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                        <input
+                            type="text"
+                            className="w-full p-2 border rounded"
+                            placeholder="Update Photo URL"
+                            value={photoURL}
+                            onChange={(e) => setPhotoURL(e.target.value)}
+                        />
+                        <button
+                            type="submit"
+                            className="bg-blue-500 text-white px-4 py-2 rounded"
+                            disabled={loading}
+                        >
+                            {loading ? "Saving..." : "Save Changes"}
+                        </button>
                     </form>
+
+                    {message && <p className="mt-4 text-center">{message}</p>}
                 </div>
             </main>
             <footer className='w-11/12 mx-auto'>

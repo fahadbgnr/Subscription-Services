@@ -57,7 +57,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <img className='px-5 w-20 rounded-full' src={`${user ? user.photoURL: userIcon }`} alt="" />
+                <img className='px-5 w-20 rounded-full' src={`${user ? user.photoURL: userIcon}`} alt="" />
                 {
                     user ? <Link to='/auth/login' onClick={handleLogout} className='btn btn-primary'>Logout</Link> : <Link to='/auth/login' className="btn btn-primary">Login</Link>
                 }
