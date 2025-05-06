@@ -4,6 +4,7 @@ import SubscriptionBox from './SubscriptionBox';
 const Home = () => {
     return (
         <div>
+           
            <SubscriptionBox></SubscriptionBox>
         </div>
     );
