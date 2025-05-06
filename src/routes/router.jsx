@@ -11,6 +11,7 @@ import PrivateRoute from "../provider/PrivateRoute";
 import Loading from "../pages/Loading";
 import ErrorPage from "../pages/ErrorPage";
 import ForgatePass from "../pages/ForgatePass";
+import Subscription from "../pages/Subscription";
 
 const router = createBrowserRouter(
     [
@@ -36,7 +37,15 @@ const router = createBrowserRouter(
 
         {
             path:'/profile',
-            element: <MyProfile></MyProfile>,
+            element: <PrivateRoute>
+                <MyProfile></MyProfile>,
+            </PrivateRoute>
+        },
+        {
+            path:'/subscription',
+            element: <PrivateRoute>
+                <Subscription></Subscription>
+            </PrivateRoute>,
         },
 
         {

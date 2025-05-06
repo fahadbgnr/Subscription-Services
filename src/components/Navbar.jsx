@@ -21,6 +21,7 @@ const Navbar = () => {
 
         <NavLink to='/' className='m-2 text-accent active:text-indigo-800' >Home</NavLink>
         <NavLink to='/profile' className='m-2 text-accent active:text-indigo-800'>MyProfile</NavLink>
+        <NavLink to='/subscription' className='m-2 text-accent active:text-indigo-800'>Subscription</NavLink>
 
 
 
