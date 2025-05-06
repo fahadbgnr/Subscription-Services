@@ -1,6 +1,8 @@
 import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     const [error, setError]= useState("");
@@ -16,6 +18,7 @@ const Login = () => {
         singIn(email, password).then(result => {
             const user = result.user;
             navigate(`${location.state? location.state: "/"}`)
+            toast.success("Login successfully")
 
         })
             .catch((error) => {
@@ -23,12 +26,16 @@ const Login = () => {
                 // const errorMessage = error.message;
             //   alert(errorCode, errorMessage)
             setError(errorCode);
+            toast.error("Your Password was wrong. Please try again")
             });
 
     }
     return (
         <div className='flex justify-center min-h-screen items-center'>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-5">
+                <Helmet>
+                    <title>CHIP | Login</title>
+                </Helmet>
                 <h2 className='font-semibold text-2xl text-center'>Login Your Account</h2>
                 <form onSubmit={handleLogin} className="card-body">
                     <fieldset className="fieldset">
@@ -52,7 +59,7 @@ const Login = () => {
                             required
                         />
 
-                        <div><a className="link link-hover">Forgot password?</a></div>
+                        <div><Link to='/auth/forget-pass' className="link link-hover">Forgot password?</Link></div>
 
                         {
                             error && <p className='text-red-400 text-xs'>{error}</p>

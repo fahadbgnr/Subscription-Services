@@ -9,6 +9,8 @@ import AuthLayout from "../layout/AuthLayout";
 import CardsDetails from "../pages/CardsDetails";
 import PrivateRoute from "../provider/PrivateRoute";
 import Loading from "../pages/Loading";
+import ErrorPage from "../pages/ErrorPage";
+import ForgatePass from "../pages/ForgatePass";
 
 const router = createBrowserRouter(
     [
@@ -22,10 +24,6 @@ const router = createBrowserRouter(
                     loader: ()=> fetch('/subscription.json'),
                     hydrateFallbackElement: <Loading></Loading>
                 },
-                {
-                    path:'/profile',
-                    element: <MyProfile></MyProfile>,
-                },
             
                 {
                     path:'/subscription/:id',
@@ -35,6 +33,12 @@ const router = createBrowserRouter(
                 },
             ]
         },
+
+        {
+            path:'/profile',
+            element: <MyProfile></MyProfile>,
+        },
+
         {
             path: '/auth',
             element: <AuthLayout></AuthLayout>,
@@ -47,6 +51,10 @@ const router = createBrowserRouter(
                     path:"/auth/register",
                     element: <Register></Register>
                 },
+                {
+                    path:'/auth/forget-pass',
+                    element: <ForgatePass></ForgatePass>,
+                }
             ]
         },
         {
@@ -60,7 +68,7 @@ const router = createBrowserRouter(
         },
         {
             path: '/*',
-            element: <h2>Error404</h2>,
+            element: <ErrorPage></ErrorPage>,
         },
         
     ]

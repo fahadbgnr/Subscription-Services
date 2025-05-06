@@ -16,3 +16,7 @@
 *{
     font-family: "Poppins", sans-serif;
 }
+
+.active{
+  color: indigo;
+}

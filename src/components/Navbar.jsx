@@ -2,22 +2,25 @@ import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import userIcon from '../assets/user.png';
 import { AuthContext } from '../provider/AuthProvider';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
     const {user, logOut}= use(AuthContext);
     const handleLogout=()=>{
-        console.log("user trying to log out")
+        // console.log("user trying to log out")
         logOut().then(() => {
             alert("you logged out successfully")
+            toast.success("Log out successfully")
           }).catch((error) => {
             console.log(error);
+            toast.error("please try again")
           });
     }
 
     const link = <>
 
-        <NavLink to='/' className='m-2 text-accent' >Home</NavLink>
-        <NavLink to='/profile' className='m-2 text-accent'>MyProfile</NavLink>
+        <NavLink to='/' className='m-2 text-accent active:text-indigo-800' >Home</NavLink>
+        <NavLink to='/profile' className='m-2 text-accent active:text-indigo-800'>MyProfile</NavLink>
 
 
 

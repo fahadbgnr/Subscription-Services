@@ -1,6 +1,8 @@
 import React, { use, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
+import { toast } from 'react-toastify';
 
 const Register = () => {
     const {createUser, setUser, updateUser}= use(AuthContext);
@@ -24,15 +26,17 @@ const Register = () => {
         createUser(email, password)
         .then(result=>{
           const  user= result.user;
-            // console.log(user);
+            toast.success("Register Successfully")
             updateUser({displayName:name, photoURL:photo}).then(()=>{
                 setUser({...user, displayName:name, photoURL:photo});
                 navigate("/");
+                toast.success("user update")
 
             })
             .catch((error)=>{
                 console.log(error);
                 setUser(user);
+                toast.error("user do not update")
             })
            
             
@@ -41,6 +45,7 @@ const Register = () => {
             const errorCode = error.code;
             const errorMessage = error.message;
             alert(errorMessage);
+            toast.error("Please try again")
           });
         
     
@@ -48,6 +53,9 @@ const Register = () => {
     return (
         <div className='flex justify-center min-h-screen items-center'>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-5">
+                <Helmet>
+                    <title>CHIP | Register</title>
+                </Helmet>
                 <h2 className='font-semibold text-2xl text-center'>Register Your Account</h2>
                 <form onSubmit={handleRegister} className="card-body">
                     <fieldset className="fieldset">
@@ -61,7 +69,9 @@ const Register = () => {
                             required
                         />
                         {
-                            nameError && <p className='text-xs text-error'>{nameError}</p>
+                            nameError && <p className='text-xs text-error'>{nameError}
+                        </p>
+                            
                         }
 
                         <label className="label">Photo Url</label>

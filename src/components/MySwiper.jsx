@@ -43,7 +43,7 @@ const MySwiper = () => {
             {[...Array(1)].map((_, i) => (
                 <SwiperSlide key={i}>
                     <img
-                        src={`https://i.ibb.co.com/XrCX8wHC/boliviainteligente-Sx-Igd-Yzhf-Z8-unsplash.jpg,${i},`}
+                        src={`https://i.ibb.co.com/GQpG892Q/smart-speaker-house-control-innovative-technology.jpg, ${i},`}
                         alt={`Slide ${i}`}
                         className="rounded-xl shadow-lg h-[500px] w-full"
                     />
