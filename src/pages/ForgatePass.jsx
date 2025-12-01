@@ -1,6 +1,6 @@
 import { sendPasswordResetEmail } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+
 import { useLocation } from 'react-router';
 
 import { toast } from 'react-toastify';
@@ -32,10 +32,7 @@ const ForgatePass = () => {
     };
     return (
         <div>
-            <Helmet>
-                <title>Forget Password</title>
-
-            </Helmet>
+           
             <div className="max-w-md mx-auto p-4 min-h-screen my-20">
                 <h1 className="text-3xl font-bold mb-4">Forgot Password</h1>
                 <form onSubmit={handleResetPassword} className="space-y-4">

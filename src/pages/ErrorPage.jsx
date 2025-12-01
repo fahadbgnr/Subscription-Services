@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
 import { Link, useRouteError } from 'react-router';
 
 
@@ -11,9 +11,7 @@ const ErrorPage = () => {
     return (
         <div>
             <div className=' py-24 text-center' >
-                <Helmet>
-                    <title>Errorpage</title>
-                </Helmet>
+               
                 <h1 className='mb-8 text-4xl lg:text-7xl font-semibold text-accent'>
                     {
                         error?.status || 404

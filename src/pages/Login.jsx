@@ -1,12 +1,12 @@
-import React, { use, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
-import { Helmet } from 'react-helmet-async';
+
 import { toast } from 'react-toastify';
 
 const Login = () => {
     const [error, setError]= useState("");
-    const { singIn } = use(AuthContext);
+    const { singIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     const handleLogin = (e) => {
@@ -33,9 +33,6 @@ const Login = () => {
     return (
         <div className='flex justify-center min-h-screen items-center'>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-5">
-                <Helmet>
-                    <title>CHIP | Login</title>
-                </Helmet>
                 <h2 className='font-semibold text-2xl text-center'>Login Your Account</h2>
                 <form onSubmit={handleLogin} className="card-body">
                     <fieldset className="fieldset">

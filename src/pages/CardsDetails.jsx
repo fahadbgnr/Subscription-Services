@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 
 import { useLoaderData, useParams } from 'react-router';
 import Cards from '../components/Cards';
-import { Helmet } from 'react-helmet-async';
+
 
 const CardsDetails = () => {
     const data = useLoaderData();
@@ -21,9 +21,7 @@ const CardsDetails = () => {
    
     return (
         <div>
-            <Helmet>
-                <title>CHIP | Card Details</title>
-            </Helmet>
+            
             <header className='w-11/12 mx-auto my-5'>
                 <Navbar></Navbar>
             </header>

@@ -1,14 +1,11 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const Subscription = () => {
     return (
         <div>
-            <Helmet>
-                <title>CHIP|subscription</title>
-            </Helmet>
+            
             <nav className='w-11/12 mx-auto my-3'>
                 <Navbar></Navbar>
             </nav>
